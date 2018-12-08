@@ -1,0 +1,31 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.indt.ivan.lojavirtual"
+    },
+    "jhipsterVersion": "5.7.0",
+    "applicationType": "monolith",
+    "baseName": "lojaVirtual",
+    "packageName": "com.indt.ivan.lojavirtual",
+    "packageFolder": "com/indt/ivan/lojavirtual",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MWQwOWVlM2RiNGYwNzE2Nzc2MDgwMDY3NDRiOWM2ZmU1NzZmOTFlZDQzYWQwMTg2M2ZjYmU5YmQ1ODY2NTE4MDRhNDM2MDAwMDk3ZTg3OTE1ODk1OWYwNGM2NGQwYjYyNjYxODZjYjcwNzE1NzJhNjE5YjQwOTA1NTg3MjkxOTA=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true
+  }
+}

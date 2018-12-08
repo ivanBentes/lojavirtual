@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loja Virtual</title>
+    <script language="JavaScript" src="authentication.controller.js"></script>
+    <script language="JavaScript" src="cookie.controller.js"></script>
+    <script language="JavaScript" src="product.service.js"></script>
+    <script language="JavaScript" src="product.controller.js"></script>
+    <link rel="stylesheet" type="text/css" href="product.css">
+</head>
+<script>
+    login();
+    getAllProducts();
+</script>
+<body>
+    <header>
+        <h2>Loja Virtual</h2>
+    </header>
+    <br>
+    <div>
+        <button id="create-product" class="button button-register">CADASTRAR PRODUTO</button>
+        <dialog id="my-modal">
+            <form name="CreateForm">
+                <h1>Cadastro de produto</h1>
+                <p>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="name" placeholder="Nome do produto" required="required" name="nome" />
+                </p>
+                <p>
+                    <label for="quantity">Quantidade:</label>
+                    <input type="number" id="quantity" placeholder="Quantidade do produto" required="required" name="quantity" />
+                </p>
+                <p>
+                    <label for="price">Preço:</label>
+                    <input type="number" id="price" placeholder="Preço do produto" required="required" name="price" />
+                </p>
+                <p>
+                    <label for="manufacturer">Fabricante:</label>
+                    <input type="text" id="manufacturer" placeholder="Fabricante do produto" required="required" name="manufacturer" />
+                </p>
+                <p>
+                    <label for="supplier">Fornecedor:</label>
+                    <input type="text" id="supplier" placeholder="Fornecedor do produto" required="required" name="supplier" />
+                </p>
+            </form>
+            <div class="actions">
+                <button id='close-button' class="button close-modal-btn button-delete">Fechar</button>
+                <button id="confirm-button-create" class="button ok-modal-btn button-save">Cadastrar</button>
+            </div>
+        </dialog>
+    </div>
+    <div>
+        <dialog id="my-modal-update">
+            <form name="UpdateForm">
+                <h1>Atualização de produto</h1>
+                <p>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="nameUpdate" placeholder="Nome do produto" required="required" name="name" />
+                </p>
+                <p>
+                    <label for="quantity">Quantidade:</label>
+                    <input type="number" id="quantityUpdate" placeholder="Quantidade do produto" required="required"
+                        name="quantity" />
+                </p>
+                <p>
+                    <label for="price">Preço:</label>
+                    <input type="number" id="priceUpdate" placeholder="Preço do produto" required="required" name="price" />
+                </p>
+                <p>
+                    <label for="manufacturer">Fabricante:</label>
+                    <input type="text" id="manufacturerUpdate" placeholder="Fabricante do produto" required="required"
+                        name="manufacturer" />
+                </p>
+                <p>
+                    <label for="supplier">Fornecedor:</label>
+                    <input type="text" id="supplierUpdate" placeholder="Fornecedor do produto" required="required" name="supplier" />
+                </p>
+            </form>
+            <div class="actions">
+                <button id='close-button-update' class="button close-modal-btn button-delete">Fechar</button>
+                <button id="confirm-button-update" class="button ok-modal-btn button-save">Atualizar</button>
+            </div>
+        </dialog>
+    </div>
+    <div>
+        <dialog id="delete-modal">
+            <div>
+                <h1>Exclusão de produto</h1>
+                <h4>Deseja excluir este produto?</h4>
+            </div>
+            <div class="actions">
+                <button id='close-button-delete' class="button close-modal-btn button-delete">Fechar</button>
+                <button id='confirm-button-delete' class="button ok-modal-btn button-save">Excluir</button>
+            </div>
+        </dialog>
+    </div>
+    <div>
+        <br>
+        <table id="productTable">
+            <tr>
+                <th>Nome</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Fabricante</th>
+                <th>Fornecedor</th>
+                <th>Editar produto</th>
+                <th>Excluir produto</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    addModalTriggers();
+    editModalTriggers();
+    deleteModalTrigger();
+</script>
+
+</html>

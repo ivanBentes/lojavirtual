@@ -1,0 +1,12 @@
+
+entity Product {
+	name String,
+    quantity Integer,
+    price Double,
+    manufacturer String,
+    supplier String
+}
+
+paginate all with pagination
+dto * with mapstruct
+service all with serviceImpl
